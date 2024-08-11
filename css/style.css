@@ -7,13 +7,15 @@ address { font-style: normal; }
 
 :root {
     --main-color1: rgb(31,31,84);
-    --main-color2:#ba70a5;
-    --main-color3:#c19596;
-    --main-color4:#c2b497;
+    --main-color2:#aa253b;
+    --main-color3:#d8932b;
+    --main-color4:#dad760;
+    --main-color5:rgb(31,31,84);
     --main-op-color1: rgba(123,112,172,0.7);
-    --main-op-color2: rgba(186,112,165,0.7);
-    --main-op-color3: rgba(193,149,150,0.7);
-    --main-op-color4: rgba(194,180,151,0.7);
+    --main-op-color2: rgba(168, 99, 96, 0.7);
+    --main-op-color3: rgba(207, 180, 129, 0.7);
+    --main-op-color4: rgba(188, 194, 151, 0.7);
+    --main-op-color5: rgba(151, 155, 194, 0.7);
 }
 
 body { 
@@ -70,10 +72,13 @@ header {
 header > .MainBack{
     background-color: #fff;
 }
-
+.MainText:hover{
+    color: var(--main-op-color1);
+    transition: 0.3s;
+    cursor: pointer;
+}
 header > .MainText{
     font-weight: bolder;
-    
 }
 
 .web{
@@ -101,6 +106,11 @@ header > div > ul > li {
     margin-right: 20px;
     border-radius: 50% 20% / 10% 40%;
 }
+header > div > ul > li:hover{
+    color: #fff;
+    background-color: rgb(255, 200, 0);
+    transition: 0.3s;
+}
 header nav ul {
     display: flex;
     color:#fff;
@@ -123,9 +133,8 @@ header > ul > li{
     margin: 0 auto;
 }
 .visual {
-    background: url('/img/dungmain1.jpg') center center ;
+    background-image: url('../img/dungmain1.jpg');
     background-size: cover;
-    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -133,10 +142,13 @@ header > ul > li{
 }
 .visual h2 {
     text-align: center;
-    padding-top: 200px;
+    width: 100%;
+    height: 800px;
 }
+
 .visual h2 img{
-    width: 80%;
+    width: 100%;
+    height: 800px;
 }
 .visual > ul {
     display: flex;
@@ -153,10 +165,10 @@ header > ul > li{
 .visual > ul > li div {
     position: absolute; left: 0; width: 100%;
 }
-.visual > ul > li:nth-child(1) .rollout {background: var(--main-color1);}
-.visual > ul > li:nth-child(2) .rollout {background: var(--main-color2);}
-.visual > ul > li:nth-child(3) .rollout {background: var(--main-color3);}
-.visual > ul > li:nth-child(4) .rollout {background: var(--main-color4);}
+.visual > ul > li:nth-child(1) .rollout {background: var(--main-color2);}
+.visual > ul > li:nth-child(2) .rollout {background: var(--main-color3);}
+.visual > ul > li:nth-child(3) .rollout {background: var(--main-color4);}
+.visual > ul > li:nth-child(4) .rollout {background: var(--main-color5);}
 .rollout {
     bottom: 0;
     height: 120px;
@@ -164,10 +176,10 @@ header > ul > li{
     transition: 0.3s;
 }
 
-.visual > ul > li:nth-child(1) .rollover {background: var( --main-op-color1);}
-.visual > ul > li:nth-child(2) .rollover {background: var( --main-op-color2);}
-.visual > ul > li:nth-child(3) .rollover {background: var( --main-op-color3);}
-.visual > ul > li:nth-child(4) .rollover {background: var( --main-op-color4);}
+.visual > ul > li:nth-child(1) .rollover {background: var( --main-op-color2);}
+.visual > ul > li:nth-child(2) .rollover {background: var( --main-op-color3);}
+.visual > ul > li:nth-child(3) .rollover {background: var( --main-op-color4);}
+.visual > ul > li:nth-child(4) .rollover {background: var( --main-op-color5);}
 .rollover {
     height: 300px;
     top:100%;
@@ -304,7 +316,8 @@ footer {
     align-items: center;
     padding-bottom: 40px;
     text-align: center;
-    color:#fff;
+    color:red;
+    background-color: #dad760;
 }
 footer address {
     width: 60%;
